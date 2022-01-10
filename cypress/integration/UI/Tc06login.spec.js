@@ -8,7 +8,7 @@ describe('Verify the login functionality',()=>{
         cy.title().should('eq','user info')
     })
 
-    it('Verify the login functionality with valid cardentials',()=>{
+    it('Verify the login functionality with invalid cardentials',()=>{
         cy.visit('http://testphp.vulnweb.com/login.php')
         cy.get('input[name="uname"]').type('test')
         cy.get('input[name="pass"]').type('test123')
