@@ -1,3 +1,4 @@
 {
-    "pageLoadTimeout":90000
+    "pageLoadTimeout":90000,
+    "failOnStatusCode": false
 }
