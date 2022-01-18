@@ -1,9 +1,9 @@
 
-// Cypress.on('uncaught:exception', (err, runnable) => {
-//     // returning false here prevents Cypress from
-//     // failing the test
-//     return false
-//     })
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false
+    })
 describe('Verify the login functionality',()=>{
     it('Verify login functionality with valid cardentials',()=>{
         cy.visit('https://auth.testproject.io/auth/realms/TP/protocol/openid-connect/auth?client_id=tp.app&redirect_uri=https%3A%2F%2Fapp.testproject.io%2Fcallback.html&response_type=id_token%20token&scope=openid%20profile&state=28efaf1fda084e12bf48cf4114c7225d&nonce=1bba86461c914c48b391f14ce8bbf6c9')
