@@ -1,5 +1,3 @@
-
-
 describe('Verify the functionality of Datepicker', () => {
 
     it('Validate the functionality of DatePicker', () => {

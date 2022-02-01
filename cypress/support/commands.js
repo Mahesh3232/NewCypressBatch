@@ -24,3 +24,19 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('Gorest', (method, url,body) => { 
+
+
+    cy.request({
+        method: method,
+        url: url,
+        headers: {
+            Authorization: 'Bearer 554b97a07b598b012f137a5804ae7617dc67fe4da3974abae2274a75655d70a7'
+        },
+        body:body
+
+        
+    })
+
+ })
+
