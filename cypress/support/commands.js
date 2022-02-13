@@ -38,5 +38,5 @@ Cypress.Commands.add('Gorest', (method, url,body) => {
         
     })
 
- })
+})
 

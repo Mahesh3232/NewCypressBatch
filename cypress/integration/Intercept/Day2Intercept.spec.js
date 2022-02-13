@@ -26,7 +26,7 @@ describe('Validate the Api request with intercept', () => {
         cy.get('div[class="network-comment"]').should('contain', 'laudantium enim quasi')
     })
 
-    it('Validate thr POST API request using intercept', () => {
+    it.only('Validate thr POST API request using intercept', () => {
         cy.intercept({
             method: "POST",
             url: "https://jsonplaceholder.cypress.io/comments"
@@ -42,7 +42,7 @@ describe('Validate the Api request with intercept', () => {
         cy.get('div[class="network-post-comment"]').should('have.text', 'POST successful!')
     })
 
-    it('Validate PUT API using intercept', () => {
+    it.only('Validate PUT API using intercept', () => {
         cy.intercept({
             method: "PUT",
             url: "https://jsonplaceholder.cypress.io/comments/1"
@@ -53,6 +53,9 @@ describe('Validate the Api request with intercept', () => {
             cy.log(res)
             expect(res.response.statusCode).to.eq(200)
             expect(res.request.headers.host).to.eq("jsonplaceholder.cypress.io")
+            //expect(res.responce['body']['body']).to.eq('"You can change the method used for cy.intercept() to be GET, POST, PUT, PATCH, or DELETE"')
+            expect(res.response.body).to.have.all.keys('body', 'email', 'id', 'name')
+            expect(res.responce['body']['name']).to.eq("Using PUT in cy.intercept()")
         })
     })
 })
