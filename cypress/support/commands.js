@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import 'cypress-file-upload'
 
 Cypress.Commands.add('Gorest', (method, url,body) => { 
 
@@ -39,4 +40,20 @@ Cypress.Commands.add('Gorest', (method, url,body) => {
     })
 
 })
+
+Cypress.Commands.add('getAndSetToken', (email,password) => {
+    cy.request({
+        url: 'https://conduit.productionready.io/api/users/login',
+        method: 'POST',
+        body: {
+            user: {
+                email,
+                password
+            }
+        }
+    }).then(response => {
+        const token = response.body.user.token;
+        localStorage.setItem('jwt', token);
+    });
+ });
 

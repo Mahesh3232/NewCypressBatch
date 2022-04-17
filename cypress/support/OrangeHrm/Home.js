@@ -30,19 +30,3 @@ export class homepage{
 }
 
 
-export class Dashboard{
-    elements={
-        QuickLaunch:'table[class="quickLaungeContainer"]',
-        MenuTab:'ul[id="mainMenuFirstLevelUnorderedList"]',
-        Legend:'table[style="font-size:smaller;color:#545454"]',
-        Logo:'#branding > a:nth-child(1) > img'
-    }
-
-    VerifyMenuTab(){
-        cy.get(this.elements.MenuTab).children().should('have.length',11)
-    }
-
-    VerifyQuickLaunch(){
-        cy.get(this.elements.QuickLaunch).find('tbody').find('tr').children().should('have.lenght',6)
-    }
-}

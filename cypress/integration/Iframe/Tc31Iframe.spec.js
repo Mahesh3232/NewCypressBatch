@@ -12,7 +12,7 @@ describe('Validate Iframe Functionality', () => {
     it.only('Verify Iframe using javaScript', () => {
         cy.visit('http://www.webdriveruniversity.com/IFrame/index.html')
         cy.get('iframe[id="frame"]').then((ele) => {
-            //console.log(ele)
+            console.log(ele)
             let body = ele['0'].contentDocument.body
             //cy.log(body)
             cy.wrap(body).as('Iframe')

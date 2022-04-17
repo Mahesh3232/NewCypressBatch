@@ -55,6 +55,6 @@ describe('Validate the Gorest POST api', () => {
                     expect(res.body.data).has.property('name', 'Mahesh Ramakrishna')
                 })
             })
-        })
+        })//
     })
 })

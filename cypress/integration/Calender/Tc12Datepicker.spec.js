@@ -1,12 +1,12 @@
 describe('Verify the date picker functionality', () => {
-    
+
     it('Verify the DatePicker functionality', () => {
         let date = new Date()
-        date.setDate(date.getDate() + 100)//22/april /2022
+        date.setDate(date.getDate() + 100)
         let Year = date.getFullYear().toString().slice(2)
         let Month = date.toLocaleString('default', { month: "long" })
         let da = date.getDate()
-        cy.log(typeof (Year))
+        cy.log(Year)
         cy.log(Month)
         cy.log(da)
 
@@ -27,14 +27,12 @@ describe('Verify the date picker functionality', () => {
             })
         } function SelectDate() {
             cy.get('tbody').last().find('._2JMZ').each((el) => {
-                cy.log(el.text())
+                //cy.log(el.text())
                 if (el.text().includes(da)) {
                     (el).click()
-                    //SelectDate()
-                }
-                //cy.get('._2JMZ').contains(da).click()
-            })
 
+                }
+            })
         }
         SelectYearMonth()
         SelectDate()
