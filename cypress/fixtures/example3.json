@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "firstName": "A -Using fixtures to represent data",
+            "lastName": "B -hello@cypress.io",
+            "email": " CFixtures are a great way to mock data for responses to routes",
+            "message": " D -hello"
+        },
+        {
+            "firstName": " E -Using fixtures to represent data",
+            "lastName": " F -hello@cypress.io",
+            "email": " G - Fixtures are a great way to mock data for responses to routes",
+            "message": " H-hello"
+        }
+    ]
+}
