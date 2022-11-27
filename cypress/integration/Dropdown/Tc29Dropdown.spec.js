@@ -37,11 +37,7 @@
 // })
 
 
-describe('Radio buttons automation',()=>{
-    
-  
-  
-          
+describe('Radio buttons automation',()=>{      
        it('to test the radio button is checked',()=>{
           cy.visit('https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html')
           cy.get('input[value="green"]').should('be.checked')

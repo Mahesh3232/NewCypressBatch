@@ -12,7 +12,7 @@ describe('Verify the date Picker functionality',()=>{
         cy.visit('https://www.redbus.com/')
         cy.get('input[id="onward_cal"]').click({force: true})
         function SelectYearMonth(){
-            cy.get('.monthTitle').last().then((el)=>{
+            cy.get('.DayNavigator__IconBlock-sc-1tlckkc-2.eTppvw').eq(2).then((el)=>{
                 if(!el.text().includes(Year)){
                     cy.get('.next').last().click()
                     SelectYearMonth()

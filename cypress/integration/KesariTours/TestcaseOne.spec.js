@@ -11,7 +11,8 @@ describe('Validate the kesari tours', () => {
             //cy.log(herf)
             arr.push(herf)
             cy.log(arr);
-        }).then(() => {
+        })
+        .then(() => {
             cy.get('#main-menu > ul >li').each((ele, index) => {
                 let text = ele.find('a:first')
                 if (text.attr('href').startsWith('/')) {
