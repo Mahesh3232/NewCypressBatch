@@ -2,5 +2,5 @@
     "pageLoadTimeout":90000,
     "failOnStatusCode": false,
      "chromeWebSecurity": false,
-     "failOnStatusCode": false
+     "_failOnStatusCode": false
 }
