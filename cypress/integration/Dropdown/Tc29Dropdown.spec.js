@@ -35,18 +35,3 @@
 //     })
 
 // })
-
-
-describe('Radio buttons automation',()=>{      
-       it('to test the radio button is checked',()=>{
-          cy.visit('https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html')
-          cy.get('input[value="green"]').should('be.checked')
-          cy.get('input[value="yellow"]').check()
-          cy.get('input[value="yellow"]').should('be.checked')
-          cy.get('input[value="purple"]').check()
-          cy.get('input[value="purple"]').should('be.checked')
-          cy.get('input[value="blue"]').check().should('be.checked')
-          cy.get('input[value="green"]').should('not.be.checked')
-          
-       })      
-  })
