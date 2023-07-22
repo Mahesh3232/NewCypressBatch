@@ -18,12 +18,14 @@ export class homepage{
         cy.get(this.elements.Logo).should('be.visible')
     }
 
+
     ForgotPassword(){
         cy.get(this.elements.ForgotPass).click()
         cy.url().should('contain','requestPasswordResetCode')
         cy.title().should('eq','OrangeHRM')
     }
 
+    
     SocialMediaIcons(){
         cy.get(this.elements.SocialIcons).children().should('have.length',4)
     }
